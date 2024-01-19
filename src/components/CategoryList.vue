@@ -9,7 +9,7 @@
                 {{ category }}
             </button> -->
 
-            <Carousel :items-to-show="3.5" :wrap-around="true">
+            <Carousel :items-to-show="2.5" :wrap-around="true">
             <Slide v-for="category in categories" :key="category">
                 <div class="carousel__item">
                     <button type="button" 
