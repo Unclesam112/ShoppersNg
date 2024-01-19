@@ -50,7 +50,8 @@
 
             <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
                 <!-- <img src="https://flowbite.com/docs/images/logo.svg" class="h-8" alt="Flowbite Logo" /> -->
-                <span class="self-center text-xl md:text-3xl md:text-green-700 font-semibold whitespace-nowrap -mt-1 dark:text-white">Shoppers</span>
+                <span class="self-center text-xl md:text-3xl md:text-green-700 font-semibold whitespace-nowrap -
+                    mt-0.5 dark:text-white">Shoppers</span>
             </a>
 
             <div class="icon flex gap-2">
