@@ -10,16 +10,13 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
-      
-      '@': fileURLToPath(new URL('./src', import.meta.url));
-      '@iconify/vue': '@iconify/vue/dist/vue.mjs', // Adjust the path based on your project structure
-    },
+      '@': fileURLToPath(new URL('./src', import.meta.url))
     }
   },
 
-  build: {
-    rollupOptions: {
-      external: ['axios']
-    }
-  }
+  // build: {
+  //   rollupOptions: {
+  //     external: ['axios']
+  //   }
+  // }
 })
