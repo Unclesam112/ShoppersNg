@@ -1,15 +1,15 @@
 <template>
     <main>
         <div class="mx-3 py-4 md:py-8 ">
-            <!-- <button type="button"
+            <button type="button"
                 class="text-green-700 hover:text-white border border-green-600 bg-white hover:bg-green-700 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:bg-gray-900 dark:focus:ring-blue-800">All
-                </button> -->
+                </button> 
             <!-- <button type="button" v-for="category in categories" :key="category"
                 class="hidden md:block text-gray-900 border border-white hover:border-gray-200 dark:border-gray-900 dark:bg-gray-900 dark:hover:border-gray-700 bg-white focus:ring-4 focus:outline-none focus:ring-gray-300 rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3 dark:text-white dark:focus:ring-gray-800">
                 {{ category }}
             </button> -->
 
-            <Carousel :items-to-show="2.5" :wrap-around="true">
+            <Carousel :items-to-show="4.5" :wrap-around="true">
             <Slide v-for="category in categories" :key="category">
                 <div class="carousel__item">
                     <button type="button" 
