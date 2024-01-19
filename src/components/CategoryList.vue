@@ -1,6 +1,6 @@
 <template>
     <main>
-        <div class="flex mx-3 py-4 md:py-8 ">
+        <div class="flex mx-3 py-1 md:py-8 ">
             <button type="button"
                 class="text-green-700 flex hover:text-white  bg-white hover:bg-green-700 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:bg-gray-900 dark:focus:ring-blue-800">All <Icon icon="ep:menu" class="mt-1 ml-1"/>
                 </button> 
@@ -9,7 +9,7 @@
                 {{ category }}
             </button> -->
 
-            <Carousel :items-to-show="2.5" :wrap-around="true">
+            <Carousel :items-to-show="3.5" :wrap-around="true">
             <Slide v-for="category in categories" :key="category">
                 <div class="carousel__item">
                     <button type="button" 
