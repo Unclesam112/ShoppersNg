@@ -48,7 +48,7 @@
               <div class="grid md:grid-cols-3">
                 <div class="md:col-span-2">
                   <h2 class="md:text-6xl text-2xl font-bold">Chic Attire, Radiant Adornments</h2>
-                  <p class="mt-2 text-sm md:text-md">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                  <p class="hidden md:block mt-2 text-sm md:text-md">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
                   <button type="button"
                     class="text-white bg-green-500 my-2 mb-0 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full md:text-sm text-xs px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                     Shop now
