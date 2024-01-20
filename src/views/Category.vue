@@ -77,7 +77,7 @@
         </div>
 
 
-
+        <FooterVue />
     </main>
 </template>
 
@@ -86,9 +86,11 @@
 import NavbarVue from '@/components/Layout/Navbar.vue'
 import ProductCard from '@/components/ProductCard.vue'
 import axios from 'axios'
+import FooterVue from '@/components/Layout/Footer.vue'
+
 
 export default {
-    components: { NavbarVue, ProductCard },
+    components: { NavbarVue, ProductCard, FooterVue },
 
     data() {
         return {
