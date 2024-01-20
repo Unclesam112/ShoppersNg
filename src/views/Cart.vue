@@ -51,6 +51,10 @@
                         </div>
                         <span class="ml-auto font-bold">${{ item.price }}</span>
                     </div>
+
+                    <button  @click='removeFromCart(item.id)' class="md:hidden my-4 bg-red-500 hover:bg-indigo-700 text-white font-bold py-2 px-4">
+               Remove
+            </button>
                 </div>
             </div>
 
@@ -68,6 +72,7 @@
   
 <script>
 import NavbarVue from '@/components/Layout/Navbar.vue';
+import { toast } from 'vue3-toastify';
 
 export default {
     data() {
@@ -93,6 +98,7 @@ export default {
 
             // Save the updated cart back to localStorage
             localStorage.setItem('cart', JSON.stringify(this.cart));
+            toast.success('Item removed')
         },
 
         calculateSubtotal() {

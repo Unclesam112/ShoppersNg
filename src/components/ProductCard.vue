@@ -58,6 +58,7 @@
 <script>
 import Button from './Button.vue';
 import { Icon } from '@iconify/vue';
+import { toast } from 'vue3-toastify';
 
 export default {
     props: {
@@ -87,6 +88,7 @@ export default {
             } else {
                 // If the product is not in the cart, add it
                 existingCart.push({ ...product, quantity: 1 });
+                toast.success('Added to cart')
                 console.log('Added to cart');
             }
 

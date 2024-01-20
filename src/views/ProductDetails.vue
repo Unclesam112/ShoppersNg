@@ -89,7 +89,7 @@
                     <div class="buttons">
                         <button type="button"
                             class="text-green-500 font-semibold border border-green-500 border-2 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
-                            @click="addToCart(product.id)">Add
+                            @click="addToCart(product)">Add
                             to cart</button>
                         <button type="button"
                             class="py-2.5 px-5 me-2 mb-2 text-sm text-green-500 font-semibold text-gray-900 focus:outline-none bg-white border  border-2 border-green-500 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Checkout</button>
@@ -111,7 +111,7 @@ import Navbar from "@/components/Layout/Navbar.vue";
 import BreadCrumb from '@/components/Layout/BreadCrumb.vue';
 import QuantityBar from '@/components/QuantityBar.vue';
 import FooterVue from '@/components/Layout/Footer.vue';
-
+import { toast } from 'vue3-toastify';
 
 
 export default {
@@ -154,20 +154,26 @@ export default {
             this.$router.push(`/category/${name}`)
         },
 
-        addToCart(id) {
-            fetch('https://fakestoreapi.com/carts',{
-            method:"POST",
-            body:JSON.stringify(
-                {
-                    userId:5,
-                    date:'2020-02-03',
-                    products:[{productId: id,quantity: 1},]
-                }
-            )
-        })
-            .then(res=>res.json())
-            .then(json=>console.log(json))
-        }
+        addToCart(product) {
+            // Fetch existing cart items from localStorage
+            const existingCart = JSON.parse(localStorage.getItem('cart')) || [];
+
+            // Check if the product is already in the cart
+            const existingProductIndex = existingCart.findIndex(item => item.id === product.id);
+
+            if (existingProductIndex !== -1) {
+                // If the product is already in the cart, increase its quantity
+                existingCart[existingProductIndex].quantity += 1;
+            } else {
+                // If the product is not in the cart, add it
+                existingCart.push({ ...product, quantity: 1 });
+                toast.success('Added to cart')
+                console.log('Added to cart');
+            }
+
+            // Save the updated cart back to localStorage
+            localStorage.setItem('cart', JSON.stringify(existingCart));
+        },
     }
 }
 </script>
