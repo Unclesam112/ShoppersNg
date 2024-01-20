@@ -2,14 +2,14 @@
     <main>
         <div class="flex mx-2 py-1 md:py-8 overflow-hidden">
             <button type="button"
-                class="text-green-700 flex hover:text-white hover:bg-green-700 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-full text-base font-medium px-5  text-center me-3 mb-3 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:bg-gray-900 dark:focus:ring-blue-800">All
+                class="text-green-700 flex hover:text-white hover:bg-green-700 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:bg-gray-900 dark:focus:ring-blue-800">All
                 <Icon icon="ep:menu" class="mt-1 ml-1" />
             </button>
 
             <div class="Genre-list">
                 <div class="top-picks">
 
-                    <div class="grid grid-cols-2">
+                    <div class="grid grid-cols-2 gap-2">
                         <div class="col">
                             <CategoryButtonVue category="Men's Clothing" />
                             
