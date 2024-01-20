@@ -56,7 +56,7 @@
 
             <div class="icon flex gap-2">
                     <div class="cart relative">
-                        <Icon  icon="f7:cart" width="35" class="p-2 bg-white rounded-full"/>
+                        <router-link to="/cart"><Icon  icon="f7:cart" width="35" class="p-2 bg-white rounded-full" /></router-link>
                         <div class="absolute inline-flex items-center justify-center w-3 h-3 text-xs font-bold text-white bg-green-500 border-2 border-white rounded-full top-1 end-0.5 dark:border-gray-900"></div>
                     </div>
 

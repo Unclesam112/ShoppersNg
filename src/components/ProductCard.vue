@@ -1,14 +1,16 @@
 <template>
-    <div @click="goToDetails(product.id)" class="w-full relative max-w-sm dark:bg-gray-800 dark:border-gray-700 hover:shadow">
+    <div
+        class="w-full relative max-w-sm dark:bg-gray-800 dark:border-gray-700 hover:shadow">
         <div class="p-2 absolute top-0 right-4">
-                    <Icon icon="ph:heart-light" width="35" class="p-2 bg-gray-50 rounded-md"/>
-                </div>
-       
-            <img class="p-8 w-40 h-40 object-contain mx-auto rounded-t-lg" :src="product.image" alt="product image" />
-    
+            <Icon icon="ph:heart-light" width="35" class="p-2 bg-gray-50 rounded-md" />
+        </div>
+
+        <img  @click="goToDetails(product.id)" class="p-8 w-40 h-40 object-contain mx-auto rounded-t-lg" :src="product.image" alt="product image" />
+
         <div class="px-5 pb-5">
             <a href="#">
-                <h5 class="text-md font-semibold tracking-tight text-gray-900 dark:text-white truncate">{{ product.title }}</h5>
+                <h5 class="text-md font-semibold tracking-tight text-gray-900 dark:text-white truncate">{{ product.title }}
+                </h5>
             </a>
             <div class="flex items-center mt-2.5 mb-5">
                 <div class="flex items-center space-x-1 rtl:space-x-reverse">
@@ -42,11 +44,12 @@
                     class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ms-3">5.0</span>
             </div>
             <div class="flex items-center justify-between">
-                <span class="md:text-2xl pt-0.5 text-md font-medium text-gray-900 dark:text-white">${{ product.price }}</span>
+                <span class="md:text-2xl pt-0.5 text-md font-medium text-gray-900 dark:text-white">${{ product.price
+                }}</span>
                 <div class="p-5">
-                    <Icon icon="ion:cart" class="text-green-500" width="25"/>
+                    <Icon @click="addToCart(product)" icon="ion:cart" class="text-green-500" width="25" />
                 </div>
-                
+
             </div>
         </div>
     </div>
@@ -64,15 +67,31 @@ export default {
         }
     },
 
-    components: {Button, Icon},
+    components: { Button, Icon },
 
     data() {
 
     },
 
     methods: {
-        addToCart() {
-            console.log('Added to cart');
+        addToCart(product) {
+            // Fetch existing cart items from localStorage
+            const existingCart = JSON.parse(localStorage.getItem('cart')) || [];
+
+            // Check if the product is already in the cart
+            const existingProductIndex = existingCart.findIndex(item => item.id === product.id);
+
+            if (existingProductIndex !== -1) {
+                // If the product is already in the cart, increase its quantity
+                existingCart[existingProductIndex].quantity += 1;
+            } else {
+                // If the product is not in the cart, add it
+                existingCart.push({ ...product, quantity: 1 });
+                console.log('Added to cart');
+            }
+
+            // Save the updated cart back to localStorage
+            localStorage.setItem('cart', JSON.stringify(existingCart));
         },
 
         goToDetails(id) {
