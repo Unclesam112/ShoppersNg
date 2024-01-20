@@ -42,7 +42,7 @@
                     class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ms-3">5.0</span>
             </div>
             <div class="flex items-center justify-between">
-                <span class="md:text-2xl text-md font-medium text-gray-900 dark:text-white">${{ product.price }}</span>
+                <span class="md:text-2xl pt-0.5 text-md font-medium text-gray-900 dark:text-white">${{ product.price }}</span>
                 <div class="p-5">
                     <Icon icon="ion:cart" class="text-green-500" width="25"/>
                 </div>
