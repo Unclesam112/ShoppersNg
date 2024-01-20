@@ -1,30 +1,27 @@
 <template>
     <main>
-        <div class="flex mx-3 py-1 md:py-8 ">
+        <div class="flex mx-2 py-1 md:py-8 overflow-hidden">
             <button type="button"
-                class="text-green-700 flex hover:text-white  bg-white hover:bg-green-700 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:bg-gray-900 dark:focus:ring-blue-800">All <Icon icon="ep:menu" class="mt-1 ml-1"/>
-                </button> 
-            <!-- <button type="button" v-for="category in categories" :key="category"
-                class="hidden md:block text-gray-900 border border-white hover:border-gray-200 dark:border-gray-900 dark:bg-gray-900 dark:hover:border-gray-700 bg-white focus:ring-4 focus:outline-none focus:ring-gray-300 rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3 dark:text-white dark:focus:ring-gray-800">
-                {{ category }}
-            </button> -->
-
-            <Carousel :items-to-show="3.5" :wrap-around="true">
-            <Slide v-for="category in categories" :key="category">
-                <div class="carousel__item">
-                    <button type="button" 
-                    class="text-gray-900 bg-white text-gray-500 my-4 border border-gray-300 focus:outline-none hover:bg-red-700 hover:text-white focus:ring-4 focus:ring-gray-200 font-medium rounded-full text-sm px-5 py-2.5 me-8 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 w-full">
-                {{ category }}
+                class="text-green-700 flex hover:text-white hover:bg-green-700 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-full text-base font-medium px-5  text-center me-3 mb-3 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:bg-gray-900 dark:focus:ring-blue-800">All
+                <Icon icon="ep:menu" class="mt-1 ml-1" />
             </button>
+
+            <div class="Genre-list">
+                <div class="top-picks">
+
+                    <div class="grid grid-cols-2">
+                        <div class="col">
+                            <CategoryButtonVue category="Men's Clothing" />
+                            
+                        </div>
+
+                        <div class="col">
+                            <CategoryButtonVue category="Women's Clothing" />
+                        </div>
+                    </div>
                 </div>
-            </Slide>
-
-        </Carousel>
+            </div>
         </div>
-
-
-
-        
     </main>
 </template>
 
@@ -34,6 +31,8 @@ import { defineComponent } from 'vue'
 import { Carousel, Navigation, Slide } from 'vue3-carousel'
 import 'vue3-carousel/dist/carousel.css'
 import { Icon } from '@iconify/vue'
+import CategoryButtonVue from './CategoryButton.vue'
+
 export default defineComponent({
     data() {
         return {
@@ -45,7 +44,8 @@ export default defineComponent({
         Carousel,
         Slide,
         Navigation,
-        Icon
+        Icon,
+        CategoryButtonVue
     },
 
     mounted() {
@@ -57,6 +57,9 @@ export default defineComponent({
             try {
                 const res = await axios.get('https://fakestoreapi.com/products/categories');
                 const data = res.data
+                // data.map((category) => {
+
+                // })
                 this.categories = data;
                 console.log(data);
             }
@@ -68,4 +71,11 @@ export default defineComponent({
 })
 </script>
 
-<style></style>
+<style scoped>
+.carousel__item {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    white-space: nowrap;
+}
+</style>
