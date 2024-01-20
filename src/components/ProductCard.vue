@@ -3,9 +3,9 @@
         <div class="p-2 absolute top-0 right-4">
                     <Icon icon="ph:heart-light" width="35" class="p-2 bg-gray-50 rounded-md"/>
                 </div>
-        <a href="#">
+       
             <img class="p-8 w-40 h-40 object-contain mx-auto rounded-t-lg" :src="product.image" alt="product image" />
-        </a>
+    
         <div class="px-5 pb-5">
             <a href="#">
                 <h5 class="text-md font-semibold tracking-tight text-gray-900 dark:text-white truncate">{{ product.title }}</h5>
