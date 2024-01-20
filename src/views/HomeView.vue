@@ -18,7 +18,7 @@ export default {
   <main class="bg-gray-50">
     <HeaderVue />
 
-    <div class="category">
+    <div class="category md:hidden">
       <CategoryList />
     </div>
 
