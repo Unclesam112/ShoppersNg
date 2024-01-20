@@ -52,7 +52,7 @@
 
                 <p class="text-xl font-semibold text-gray=-500 mb-4">${{ product.price }} </p>
 
-                <i class="text-sm my-2 text-gray-400 capitalize">{{ product.category }}</i>
+                <i @click="goToLink(product.category)" class="text-sm my-2 text-gray-400 capitalize">{{ product.category }}</i>
 
 
 
@@ -148,6 +148,10 @@ export default {
 
         getImageUrl(path) {
             return path ? `${path}` : 'https://via.placeholder.com/500';
+        },
+
+        goToLink(name) {
+            this.$router.push(`/category/${name}`)
         },
 
         addToCart(id) {
