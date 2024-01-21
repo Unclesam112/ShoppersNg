@@ -13,7 +13,7 @@
             </button>
         </div>
         <div class="mt-8">
-            <div class="flex flex-col md:flex-row border-b border-gray-400 py-4" v-for="item in cart" :key="item.id">
+            <div class="flex flex-col md:flex-row border-b border-gray-400 py-4" v-if="cart.length > 0" v-for="item in cart" :key="item.id">
                 <div class="flex-shrink-0">
                     <img :src="item.image" alt="Product image" class="w-32 h-32 object-contain">
                 </div>
@@ -34,6 +34,11 @@
                Remove
             </button>
                 </div>
+            </div>
+
+            <div v-else class="flex h-auto justify-center items-center">
+                <h1 class="text-lg text-gray-300">No item here</h1>
+
             </div>
 
         </div>
