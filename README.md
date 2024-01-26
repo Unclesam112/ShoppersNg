@@ -40,6 +40,6 @@ npm run test:unit
 npm run lint
 ```
 
-#Overview
+## Overview
 
 Shoppers is a web application developed using Vue.js and powered by the FakeStoreAPI. It provides a platform for users to explore a variety of products, add items to their cart, and simulate a shopping experience.
