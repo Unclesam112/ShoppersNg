@@ -1,18 +1,18 @@
 <template>
     <div
-        class="w-full relative max-w-sm dark:bg-gray-800 dark:border-gray-700 hover:shadow">
-        <div class="p-2 absolute top-0 right-4">
-            <Icon icon="ph:heart-light" width="35" class="p-2 bg-gray-50 rounded-md" />
+        class="w-full relative max-w-sm dark:bg-gray-800 dark:border-gray-700 hover:shadow mx-auto">
+        <div class="sm:p-2 absolute top-0 sm:right-4 right-2">
+            <Icon icon="ph:heart-light" class="text-lg text-orange-500 sm:p-2 md:bg-gray-50 rounded-md" />
         </div>
 
-        <img  @click="goToDetails(product.id)" class="p-8 w-40 h-40 object-contain mx-auto rounded-t-lg" :src="product.image" alt="product image" />
+        <img  @click="goToDetails(product.id)" class="md:p-8 p-2 sm:w-40 sm:h-40 w-20 h-20 object-contain mx-auto rounded-t-lg" :src="product.image" alt="product image" />
 
-        <div class="px-5 pb-5">
+        <div class="sm:px-5 pb-5">
             <a href="#">
-                <h5 class="text-sm font-medium tracking-tight text-gray-900 dark:text-white truncate">{{ product.title }}
+                <h5 class="md:text-sm text-xs font-medium tracking-tight text-gray-900 dark:text-white line-clamp-2 sm:truncate">{{ product.title }}
                 </h5>
             </a>
-            <div class="flex items-center mt-2.5 mb-5">
+            <div class="md:flex items-center mt-2.5 mb-5 hidden ">
                 <div class="flex items-center space-x-1 rtl:space-x-reverse">
                     <svg class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
                         fill="currentColor" viewBox="0 0 22 20">
@@ -44,7 +44,7 @@
                     class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ms-3">5.0</span>
             </div>
             <div class="flex items-center justify-between">
-                <span class="md:text-lxl pt-0.5 text-md font-medium text-gray-900 dark:text-white">${{ product.price
+                <span class="md:text-lxl pt-0.5 sm:text-md text-sm font-medium text-gray-900 dark:text-white">${{ product.price
                 }}</span>
                 <div class="p-5">
                     <Icon @click="addToCart(product)" icon="ion:cart" class="text-orange-500" width="20" />

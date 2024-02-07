@@ -1,10 +1,10 @@
 <template>
     <main>
-        <div class="bg-white md:p-10 p-5 pt-5 my-8 shadow">
+        <div class="bg-white md:p-10 p-2 pt-5 my-8 shadow">
             <h1 class="text-2xl my-4 flex">
                Top Trending
             </h1>
-            <div class="grid grid-cols-2 md:grid-cols-5  gap-4">
+            <div class="grid grid-cols-3 md:grid-cols-5  gap-4">
                 <div class="col" v-for="(product, index) in products.slice(0, 10)" :key="index">
                     <ProductCard :product="product" />
                 </div>
@@ -39,7 +39,7 @@
             <h1 class="text-2xl my-4 flex">
                Women's Wear
             </h1>
-            <div class="grid grid-cols-2 md:grid-cols-5  gap-4">
+            <div class="grid grid-cols-3 md:grid-cols-5  gap-4">
                 <div class="col" v-for="(product, index) in women.slice(0, 5)" :key="index">
                     <ProductCard :product="product" />
                 </div>
@@ -54,7 +54,7 @@
             <h1 class="text-2xl my-4 flex">
                  Men's Wear
             </h1>
-            <div class="grid grid-cols-2 md:grid-cols-4  gap-4">
+            <div class="grid grid-cols-3 md:grid-cols-4  gap-4">
                 <div class="col" v-for="(product, index) in men" :key="index">
                     <ProductCard :product="product" />
                 </div>
