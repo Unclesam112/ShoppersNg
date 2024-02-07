@@ -72,7 +72,7 @@
                             </svg>
                         </button>
                     </h2>
-                    <div id="accordion-flush-body-1" class="hidden" aria-labelledby="accordion-flush-heading-1">
+                    <div id="accordion-flush-body-1" class="" aria-labelledby="accordion-flush-heading-1">
                         <div class="py-5 border-b border-gray-200 dark:border-gray-700">
                             <p class="text-gray-500 text-sm md:text-md dark:text-gray-400">{{ product.description }}.</p>
                         </div>
@@ -88,11 +88,11 @@
 
                     <div class="buttons">
                         <button type="button"
-                            class="text-green-500 font-semibold border border-green-500 border-2 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+                            class="text-black font-semibold border border-orange-500 border-2 hover:text-white hover:bg-orange-600 focus:ring-4 focus:ring-orange-300 font-medium text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
                             @click="addToCart(product)">Add
                             to cart</button>
                         <button type="button"
-                            class="py-2.5 px-5 me-2 mb-2 text-sm text-green-500 font-semibold text-gray-900 focus:outline-none bg-white border  border-2 border-green-500 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Checkout</button>
+                            class="text-black font-semibold border border-orange-500 border-2 hover:text-white hover:bg-orange-600 focus:ring-4 focus:ring-orange-300 font-medium text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Checkout</button>
                     </div>
                 </div>
 

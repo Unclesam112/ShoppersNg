@@ -1,9 +1,9 @@
 <template>
     <main>
         <div class="number-control my-2">
-            <div class="number-left"></div>
+            <div class="number-left" @click="decreaseQuanity"></div>
             <input type="number" name="number" class="number-quantity" :value="localQuantity" @input="updateQuantity" min="1">
-            <div class="number-right"></div>
+            <div class="number-right" @click="increaseQuantity"></div>
         </div>
     </main>
 </template>
@@ -22,6 +22,15 @@ export default {
     };
   },
   methods: {
+
+    increaseQuantity() {
+      this.localQuantity += 1
+    },
+
+    decreaseQuanity() {
+      this.localQuantity -= 1
+    },
+
     updateQuantity() {
       this.$emit('update:quantity', this.localQuantity);
     },

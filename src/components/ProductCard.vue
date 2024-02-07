@@ -9,7 +9,7 @@
 
         <div class="px-5 pb-5">
             <a href="#">
-                <h5 class="text-md font-semibold tracking-tight text-gray-900 dark:text-white truncate">{{ product.title }}
+                <h5 class="text-sm font-medium tracking-tight text-gray-900 dark:text-white truncate">{{ product.title }}
                 </h5>
             </a>
             <div class="flex items-center mt-2.5 mb-5">
@@ -44,10 +44,10 @@
                     class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ms-3">5.0</span>
             </div>
             <div class="flex items-center justify-between">
-                <span class="md:text-2xl pt-0.5 text-md font-medium text-gray-900 dark:text-white">${{ product.price
+                <span class="md:text-lxl pt-0.5 text-md font-medium text-gray-900 dark:text-white">${{ product.price
                 }}</span>
                 <div class="p-5">
-                    <Icon @click="addToCart(product)" icon="ion:cart" class="text-green-500" width="25" />
+                    <Icon @click="addToCart(product)" icon="ion:cart" class="text-orange-500" width="20" />
                 </div>
 
             </div>

@@ -3,10 +3,11 @@ import './assets/main.css'
 import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
-
-import { initFlowbite } from 'flowbite';
 import Vue3Toasity from 'vue3-toastify';
 import 'vue3-toastify/dist/index.css';
+
+import { initFlowbite } from 'flowbite';
+
 
 router.afterEach(() => {
   initFlowbite();

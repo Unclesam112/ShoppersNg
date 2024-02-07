@@ -22,7 +22,7 @@ export default {
       <CategoryList />
     </div>
 
-    <div class="md:mx-20">
+    <div class="md:mx-16">
       <ProductList />
     </div>
 

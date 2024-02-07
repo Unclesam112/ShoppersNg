@@ -2,7 +2,7 @@
     <main>
         <div class="bg-white md:p-10 p-5 pt-5 my-8 shadow">
             <h1 class="text-2xl my-4 flex">
-                <Icon icon="mdi:hot" color="green" width="30" class="mr-1 mt-1" /> Top Trending
+               Top Trending
             </h1>
             <div class="grid grid-cols-2 md:grid-cols-5  gap-4">
                 <div class="col" v-for="(product, index) in products.slice(0, 10)" :key="index">
@@ -37,7 +37,7 @@
 
         <div class="bg-white md:p-10 p-5 pt-5 my-8 shadow">
             <h1 class="text-2xl my-4 flex">
-                <Icon icon="mdi:hot" color="green" width="30" class="mr-1 mt-1" /> Women's Wear
+               Women's Wear
             </h1>
             <div class="grid grid-cols-2 md:grid-cols-5  gap-4">
                 <div class="col" v-for="(product, index) in women.slice(0, 5)" :key="index">
@@ -46,13 +46,13 @@
             </div>
         </div>
 
-        <div class="how-it-works shadow">
+        <!-- <div class="how-it-works shadow">
             <HowItWorks />
-        </div>
+        </div> -->
 
         <div class="bg-white md:p-10 p-5 pt-5 my-8 shadow">
             <h1 class="text-2xl my-4 flex">
-                <Icon icon="mdi:hot" color="green" width="30" class="mr-1 mt-1" /> Men's Wear
+                 Men's Wear
             </h1>
             <div class="grid grid-cols-2 md:grid-cols-4  gap-4">
                 <div class="col" v-for="(product, index) in men" :key="index">
